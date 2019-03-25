@@ -192,7 +192,7 @@ CLEAR_BIT(GPIO_BASE(GPIO_PORTD) + GPIOx_PUPDR_OFFSET, PUPDRy_0_BIT(led));
 #define GPIOx_IDR_OFFSET 0x10
 #define IDRy_BIT(y) (y)
 ```
-**5. 設置while迴圈，當按下button時，藍燈閃爍**
+**5. 設置while迴圈，當按下user button時，藍燈閃爍**
 
 ```
 while(1){
