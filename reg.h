@@ -12,11 +12,15 @@
 
 // #define READ_BIT(addr, bit) ??????
 
+#define READ_BIT(addr, bit) (REG(addr) >> (bit) & UINT32_1 )
+
 //RCC
 #define RCC_BASE 0x40023800
 
 #define RCC_AHB1ENR_OFFSET 0x30
 #define GPIO_EN_BIT(port) (port)
+
+#define BUTTON 0
 
 //GPIO
 #define GPIO_PORTA 0
@@ -44,5 +48,8 @@
 #define GPIOx_BSRR_OFFSET 0x18
 #define BRy_BIT(y) ((y) + 16)
 #define BSy_BIT(y) (y)
+
+#define GPIOx_IDR_OFFSET 0x10
+#define IDRy_BIT(y) (y)
 
 #endif
